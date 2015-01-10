@@ -16,7 +16,7 @@ public:
 	Transformation3D times(const Transformation3D &x) {
 		return Transformation3D(a.times(x.a), b.plus(a.times(x.b)));
 	}
-	Vector3D times(Vector3D &x) {
+	Vector3D times(const Vector3D &x) {
 		return a.times(x).plus(b);
 	}
 	void timesEquals(const Transformation3D &x) {
